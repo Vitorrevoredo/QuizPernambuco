@@ -144,14 +144,44 @@ body {
     margin: 0 8px;
 }
 
+/* ===== MAPA COM IMAGEM PNG ===== */
+
+.mapa-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.mapa-base {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.mapa-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .regiao-pe {
     cursor: pointer;
-    transition: opacity 0.15s, filter 0.15s;
+    transition: opacity 0.15s, fill 0.15s;
 }
 
 .regiao-pe:hover {
-    filter: brightness(1.2);
-    opacity: 0.9;
+    fill: rgba(0, 0, 0, 0.15) !important;
+}
+
+.regiao-pe.acertou {
+    fill: rgba(22, 163, 74, 0.45) !important;
+}
+
+.regiao-pe.errou {
+    fill: rgba(220, 38, 38, 0.45) !important;
 }
 
 .legenda-item {
@@ -169,4 +199,3 @@ body {
     border-radius: 3px;
     flex-shrink: 0;
 }
-

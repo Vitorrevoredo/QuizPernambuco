@@ -48,7 +48,7 @@
                                 </div>
                                 <div class="col-6">
                                     <button class="btn btn-categoria w-100" data-cat="clima">
-                                        🌤️ Clima & Natureza
+                                        🌤️ Clima &amp; Natureza
                                     </button>
                                 </div>
                                 <div class="col-12">
@@ -92,36 +92,32 @@
                     <div id="area-mapa" class="d-none mb-3">
                         <p class="text-muted text-center small mb-2">👆 Clique na mesorregião correta no mapa</p>
                         <div class="card shadow-sm p-3">
-                            <svg id="mapa-pe" viewBox="0 0 950 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+                            <div class="mapa-container">
+                                <img src="img/pernambuco.png" class="mapa-base" alt="Mapa de Pernambuco">
+                                <svg viewBox="0 0 1672 744" class="mapa-overlay" xmlns="http://www.w3.org/2000/svg">
 
-                                <polygon id="reg-sertao" class="regiao-pe" data-nome="Sertão"
-                                    points="25,95 555,48 575,218 395,272 262,242 25,218"
-                                    fill="#F59E0B" stroke="white" stroke-width="3"/>
+                                    <polygon id="reg-sertao" class="regiao-pe" data-nome="Sertão"
+                                        points="132,144 207,120 294,129 333,120 369,117 417,153 441,153 465,186 480,189 492,210 507,213 519,228 606,201 633,213 702,225 810,249 828,297 837,369 843,408 819,432 732,444 651,438 597,435 552,417 519,411 495,387 465,387 447,390 429,393 402,399 366,408 339,399 240,429 177,411 99,381 108,369 165,297 141,210"
+                                        fill="transparent" stroke="transparent" stroke-width="0"/>
 
-                                <polygon id="reg-saofrancisco" class="regiao-pe" data-nome="São Francisco"
-                                    points="262,242 395,272 575,218 530,348 322,368 178,318"
-                                    fill="#3B82F6" stroke="white" stroke-width="3"/>
+                                    <polygon id="reg-saofrancisco" class="regiao-pe" data-nome="São Francisco"
+                                        points="99,381 177,411 240,429 339,399 366,408 402,399 429,393 447,390 465,387 495,387 519,411 552,417 597,435 651,438 732,444 819,432 843,408 837,369 828,297 810,456 783,504 783,522 789,564 774,579 753,588 732,612 705,633 669,651 621,681 573,684 525,681 462,666 408,642 303,633 141,627 129,501 36,438 87,390"
+                                        fill="transparent" stroke="transparent" stroke-width="0"/>
 
-                                <polygon id="reg-agreste" class="regiao-pe" data-nome="Agreste"
-                                    points="555,48 705,68 718,218 575,218"
-                                    fill="#22C55E" stroke="white" stroke-width="3"/>
+                                    <polygon id="reg-agreste" class="regiao-pe" data-nome="Agreste"
+                                        points="978,108 954,114 918,141 867,174 858,183 834,204 810,225 810,249 828,297 837,369 843,408 825,435 786,495 795,558 852,534 891,537 912,549 951,567 990,600 1026,627 1038,606 1065,555 1074,516 1077,483 1080,456 1080,426 1062,396 1056,375 1035,360 1017,342 1014,327 1002,312 1005,288 996,273 1032,141 996,120"
+                                        fill="transparent" stroke="transparent" stroke-width="0"/>
 
-                                <polygon id="reg-mata" class="regiao-pe" data-nome="Zona da Mata"
-                                    points="705,68 808,92 816,204 718,218"
-                                    fill="#8B5CF6" stroke="white" stroke-width="3"/>
+                                    <polygon id="reg-mata" class="regiao-pe" data-nome="Zona da Mata"
+                                        points="1392,207 1338,228 1296,240 1254,237 1239,240 1188,243 1185,243 1140,267 1137,267 1119,288 1107,327 1077,348 1059,357 1059,381 1068,402 1080,426 1086,447 1086,477 1080,513 1068,540 1047,591 1047,606 1059,609 1107,618 1158,591 1188,576 1218,546 1236,516 1251,510 1278,507 1293,498 1320,492 1323,486 1323,468 1335,438 1347,423 1359,402 1368,381 1374,360 1404,306 1407,276 1395,216"
+                                        fill="transparent" stroke="transparent" stroke-width="0"/>
 
-                                <polygon id="reg-metropolitana" class="regiao-pe" data-nome="Região Metropolitana"
-                                    points="808,92 878,104 882,195 816,204"
-                                    fill="#EF4444" stroke="white" stroke-width="3"/>
+                                    <polygon id="reg-metropolitana" class="regiao-pe" data-nome="Região Metropolitana"
+                                        points="1413,153 1410,159 1398,204 1404,252 1398,264 1410,288 1410,300 1410,306 1407,312 1401,324 1386,336 1374,351 1380,363 1374,384 1332,456 1320,510 1332,513 1380,489 1434,501 1461,504 1494,510 1500,510 1515,477 1527,447 1536,420 1548,402 1548,381 1554,357 1560,330 1566,312 1572,294 1575,270 1575,246 1569,219 1569,186 1563,180 1539,171 1503,141 1479,132 1458,129"
+                                        fill="transparent" stroke="transparent" stroke-width="0"/>
 
-                                <text x="270" y="162" font-size="18" font-weight="bold" fill="white" text-anchor="middle" pointer-events="none">Sertão</text>
-                                <text x="400" y="322" font-size="14" font-weight="bold" fill="white" text-anchor="middle" pointer-events="none">São Francisco</text>
-                                <text x="642" y="145" font-size="15" font-weight="bold" fill="white" text-anchor="middle" pointer-events="none">Agreste</text>
-                                <text x="763" y="148" font-size="12" font-weight="bold" fill="white" text-anchor="middle" pointer-events="none">Z. Mata</text>
-                                <text x="848" y="152" font-size="10" font-weight="bold" fill="white" text-anchor="middle" pointer-events="none">RMR</text>
-
-                                <text x="910" y="260" font-size="12" fill="#93C5FD" text-anchor="middle" transform="rotate(-90,910,220)">Atlântico</text>
-                            </svg>
+                                </svg>
+                            </div>
 
                             <div class="d-flex flex-wrap gap-2 mt-2 justify-content-center">
                                 <span class="legenda-item"><span class="legenda-cor" style="background:#F59E0B"></span> Sertão</span>

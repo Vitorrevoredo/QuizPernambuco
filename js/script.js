@@ -15,14 +15,6 @@ const NOMES_REGIOES = {
     'reg-metropolitana': 'Região Metropolitana'
 };
 
-const CORES_ORIGINAIS = {
-    'reg-sertao':        '#F59E0B',
-    'reg-saofrancisco':  '#3B82F6',
-    'reg-agreste':       '#22C55E',
-    'reg-mata':          '#8B5CF6',
-    'reg-metropolitana': '#EF4444'
-};
-
 let perguntas = [];
 let indiceAtual = 0;
 let pontos = 0;
@@ -128,10 +120,10 @@ function responderMapa(regiaoId, q) {
     const regiaoCorreta = document.getElementById(q.regiao);
 
     if (acertou) {
-        regiaoClicada.setAttribute('fill', '#16a34a');
+        regiaoClicada.classList.add('acertou');
     } else {
-        regiaoClicada.setAttribute('fill', '#dc2626');
-        regiaoCorreta.setAttribute('fill', '#16a34a');
+        regiaoClicada.classList.add('errou');
+        regiaoCorreta.classList.add('acertou');
     }
 
     const nomeClicado = NOMES_REGIOES[regiaoId];
@@ -157,15 +149,15 @@ function registrarResultado(acertou, curiosidade, mensagemErro) {
     document.getElementById('feedback-texto').textContent = acertou
         ? 'Muito bem, você acertou!'
         : mensagemErro || 'Resposta incorreta.';
-    document.getElementById('feedback-curiosidade').textContent = '💡 ' + curiosidade;
+    document.getElementById('feedback-curiosidade').textContent = curiosidade ? '💡 ' + curiosidade : '';
 
     document.getElementById('btn-proxima').classList.remove('d-none');
 }
 
 function resetarMapa() {
-    Object.entries(CORES_ORIGINAIS).forEach(([id, cor]) => {
-        const el = document.getElementById(id);
-        if (el) el.setAttribute('fill', cor);
+    document.querySelectorAll('.regiao-pe').forEach(r => {
+        r.classList.remove('acertou', 'errou');
+        r.setAttribute('fill', 'transparent');
     });
 }
 

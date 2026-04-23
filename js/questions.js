@@ -1,77 +1,60 @@
 const QUESTIONS = {
+
     regioes: [
         {
             tipo: 'mapa',
-            pergunta: 'A capital Recife, a "Veneza Brasileira", fica em qual mesorregião de Pernambuco?',
+            pergunta: 'Recife fica em qual região de Pernambuco?',
             regiao: 'reg-metropolitana',
-            curiosidade: 'Recife tem mais de 50 pontes e é conhecida como a Veneza Brasileira!'
+            curiosidade: 'A Região Metropolitana do Recife concentra cerca de 4 milhões de habitantes!'
         },
         {
             tipo: 'mapa',
-            pergunta: 'O Complexo Industrial Portuário de Suape, um dos maiores do Nordeste, fica em qual região?',
-            regiao: 'reg-metropolitana',
-            curiosidade: 'Suape abriga mais de 140 empresas e movimenta bilhões em comércio internacional!'
-        },
-        {
-            tipo: 'mapa',
-            pergunta: 'Caruaru, a "Capital do Forró" e sede do maior São João do mundo, fica em qual mesorregião?',
+            pergunta: 'Caruaru fica em qual região de Pernambuco?',
             regiao: 'reg-agreste',
-            curiosidade: 'O São João de Caruaru está no Guinness Book como a maior festa junina do planeta!'
+            curiosidade: 'Caruaru é conhecida como a Capital do Agreste e abriga a maior feira livre do mundo!'
         },
         {
             tipo: 'mapa',
-            pergunta: 'Garanhuns, conhecida como a "Suíça Pernambucana" pelo clima frio e altitude, fica em qual região?',
-            regiao: 'reg-agreste',
-            curiosidade: 'Garanhuns fica acima dos 900 metros de altitude, sendo uma das cidades mais frias do Nordeste!'
-        },
-        {
-            tipo: 'mapa',
-            pergunta: 'Petrolina, polo de fruticultura que exporta uvas e mangas para a Europa, fica em qual mesorregião?',
+            pergunta: 'Petrolina fica em qual região de Pernambuco?',
             regiao: 'reg-saofrancisco',
-            curiosidade: 'O Vale do São Francisco é o maior exportador de uvas de mesa e mangas do Brasil!'
+            curiosidade: 'Petrolina é polo de fruticultura irrigada às margens do Rio São Francisco!'
         },
         {
             tipo: 'mapa',
-            pergunta: 'Os grandes engenhos de cana-de-açúcar do Brasil colonial ficavam em qual mesorregião pernambucana?',
+            pergunta: 'Goiana fica em qual região de Pernambuco?',
             regiao: 'reg-mata',
-            curiosidade: 'A Zona da Mata foi o coração econômico do Brasil colonial por mais de 200 anos!'
+            curiosidade: 'A Zona da Mata é a região mais úmida de Pernambuco e historicamente ligada ao cultivo de cana-de-açúcar!'
         },
         {
             tipo: 'mapa',
-            pergunta: 'Goiana, onde fica o Polo Automotivo (fábrica da Jeep/Fiat), está em qual mesorregião?',
-            regiao: 'reg-mata',
-            curiosidade: 'O Polo Automotivo de Pernambuco em Goiana foi a maior fábrica da Fiat-Chrysler instalada no Brasil!'
-        },
-        {
-            tipo: 'mapa',
-            pergunta: 'Araripina e seu polo gesseiro, que produz boa parte do gesso do Brasil, ficam em qual mesorregião?',
+            pergunta: 'Araripina fica em qual região de Pernambuco?',
             regiao: 'reg-sertao',
-            curiosidade: 'A Chapada do Araripe tem um dos maiores depósitos de gipsita (matéria-prima do gesso) do mundo!'
+            curiosidade: 'Araripina fica na Chapada do Araripe, região rica em fósseis pré-históricos!'
+        },
+        {
+            tipo: 'mapa',
+            pergunta: 'Garanhuns fica em qual região de Pernambuco?',
+            regiao: 'reg-agreste',
+            curiosidade: 'Garanhuns é chamada de "Suíça Pernambucana" por seu clima ameno de altitude!'
         }
     ],
 
     cultura: [
         {
-            pergunta: 'Qual dança típica de Pernambuco usa guarda-chuvas coloridos e é Patrimônio da UNESCO?',
-            opcoes: ['Forró', 'Frevo', 'Maracatu', 'Côco de Roda'],
+            pergunta: 'Qual dança é considerada patrimônio cultural de Pernambuco e foi declarada Patrimônio Imaterial do Brasil?',
+            opcoes: ['Forró', 'Frevo', 'Maracatu', 'Axé'],
             certa: 1,
-            curiosidade: 'O nome "frevo" vem de "ferver" — a multidão ferve de agitação no ritmo acelerado dessa dança!'
+            curiosidade: 'O Frevo surgiu no Recife no fim do século XIX e foi declarado Patrimônio Imaterial da Humanidade pela UNESCO em 2012!'
         },
         {
-            pergunta: 'Qual instrumento é a marca registrada do Maracatu Nação pernambucano?',
-            opcoes: ['Pandeiro', 'Zabumba', 'Tambor de alfaia', 'Triângulo'],
-            certa: 2,
-            curiosidade: 'O alfaia é feito artesanalmente com couro de bode e seu som grave é ouvido a distância!'
-        },
-        {
-            pergunta: 'O Carnaval de Olinda é famoso pelo desfile de qual ícone com mais de 4 metros de altura?',
-            opcoes: ['Caboclo de Lança', 'Bonecos Gigantes', 'Urubu Rei', 'Homem da Meia-Noite'],
+            pergunta: 'O Maracatu de Baque Virado é uma manifestação cultural de qual região?',
+            opcoes: ['Sertão', 'Agreste', 'Zona da Mata', 'Região Metropolitana do Recife'],
             certa: 3,
-            curiosidade: 'O Homem da Meia-Noite surgiu em 1932 e desde então anuncia o início do carnaval de Olinda!'
+            curiosidade: 'O Maracatu surgiu entre as comunidades afro-brasileiras do Recife e tem origens nas coroações de reis e rainhas africanas!'
         },
         {
-            pergunta: 'Mestre Vitalino, de Caruaru, ficou famoso por qual tipo de arte popular?',
-            opcoes: ['Xilogravura', 'Figurinhas de barro', 'Literatura de cordel', 'Escultura em madeira'],
+            pergunta: 'As figurinhas de barro do Mestre Vitalino são originais de qual cidade?',
+            opcoes: ['Recife', 'Caruaru', 'Olinda', 'Gravatá'],
             certa: 1,
             curiosidade: 'As figurinhas de barro de Mestre Vitalino estão expostas em museus de arte pelo mundo!'
         },
